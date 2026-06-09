@@ -39,7 +39,7 @@ section[data-testid="stSidebar"] { background:#10121f; border-right:1px solid #1
 #  Load data 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("startupFundingCleaned.csv")
+    df = pd.read_csv("dataset/startupFundingCleaned.csv")
     df["date"] = pd.to_datetime(df["date"], errors="coerce")
     df["startup"]    = df["startup"].str.replace(r"\\xe2\\x80\\x99", "'", regex=True)
     df["startup"]    = df["startup"].str.replace("Ola Cabs", "Ola")
